@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMonsterSimulator", "ConsoleMonsterSimulator.csproj", "{3AEFE273-E547-4E68-8739-C200AC3E830F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleMonster", "ConsoleMonster.csproj", "{F0D3D4FA-E27A-4781-8522-44835616273F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7D5F2E08-243C-4CE8-ACA9-FD0AE26C40A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3AEFE273-E547-4E68-8739-C200AC3E830F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AEFE273-E547-4E68-8739-C200AC3E830F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AEFE273-E547-4E68-8739-C200AC3E830F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AEFE273-E547-4E68-8739-C200AC3E830F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0D3D4FA-E27A-4781-8522-44835616273F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0D3D4FA-E27A-4781-8522-44835616273F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0D3D4FA-E27A-4781-8522-44835616273F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0D3D4FA-E27A-4781-8522-44835616273F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {55C71440-532C-4819-B088-494DA079DF47}
+		SolutionGuid = {1F0D98BA-7C40-41D8-9026-6B1F175FED10}
 	EndGlobalSection
 EndGlobal
