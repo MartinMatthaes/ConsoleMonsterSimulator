@@ -1,2 +1,2 @@
 # ConsoleMonsterSimulator
-ConsoleMonsterSimulator SAE
+ConsoleMonsterSimulator
