@@ -5,7 +5,9 @@ public class Program
     public static void Main(string[] args)
     {
         Console.Title = "MonsterAttack";
-        Game game = new Game();
+        Console.CursorVisible = false;
+        //Create new game and run GameLoop function
+        Game game = new();
         game.GameLoop();
     }
 }

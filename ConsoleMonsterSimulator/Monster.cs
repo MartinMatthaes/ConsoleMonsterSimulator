@@ -11,6 +11,7 @@ namespace ConsoleMonsters
     {
         public string name = "";
 
+        // HEALTH POINTS
         public float Health { get; set; }
 
         // ATTACK POINTS
@@ -22,17 +23,17 @@ namespace ConsoleMonsters
         // ATTACK SPEED
         public float S { get; set; }
 
-        protected float maxHealth { get; set; }
 
-        public Monster(float health, float aP, float dP, float s, float maxHealth)
+        //Constructor
+        public Monster(float health, float aP, float dP, float s)
         {
             Health = health;
             AP = aP;
             DP = dP;
             S = s;
-            this.maxHealth = health;
         }
 
+        //Attack method
         public void DoDamage(Monster enemy)
         {
             enemy.Health -= this.AP - enemy.DP;
