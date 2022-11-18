@@ -32,5 +32,10 @@ namespace ConsoleMonsters
             S = s;
             this.maxHealth = health;
         }
+
+        public void DoDamage(Monster enemy)
+        {
+            enemy.Health -= this.AP - enemy.DP;
+        }
     }
 }
