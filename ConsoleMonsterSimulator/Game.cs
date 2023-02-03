@@ -10,51 +10,55 @@ namespace ConsoleMonsters
 {
     public class Game
     {
-        public static int option;
+        // OPTION FOR PROGRAM UI
+        public static int option = 0;
 
-        public static int monsterOption;
+        // MONSTER OPTIONS
+        public static int monsterOption = 0;
         public static bool monsterOne = false;
         public static bool monsterTwo = false;
-        public static int monsterChosen;
-        public static int monsterChosen2;
+        public static int monsterChosen = 0;
+        public static int monsterChosen2 = 0;
 
-        public static int consoleInputMonsterOne;
-        public static int consoleInputMonsterTwo;
+        // INTEGER TO CHOOSE WHICH MONSTER
+        public static int consoleInputMonsterOne = 0;
+        public static int consoleInputMonsterTwo = 0;
 
-        public static bool validConsoleInputHealth;
-        public static bool validConsoleInputAP;
-        public static bool validConsoleInputDP;
-        public static bool validConsoleInputS;
+        // VARIABLES TO USE FOR VALIDATIOn
+        public static bool validConsoleInputHealth = false;
+        public static bool validConsoleInputAP = false;
+        public static bool validConsoleInputDP = false;
+        public static bool validConsoleInputS = false;
+        public static bool successHealth = false;
+        public static bool successAP = false;
+        public static bool successDP = false;
+        public static bool successS = false;
 
+        // CHANGABLE VARIABLES OF MONSTERSTATS
+        // HP
         public static int minHP = 600;
         public static int maxHP = 7000;
-
+        // AP
         public static int minAP = 70;
         public static int maxAP = 450;
-
+        // DP
         public static int minDP = 15;
         public static int maxDP = 60;
-
+        // S
         public static int minS = 1;
         public static int maxS = 10;
 
-        public static bool successHealth;
-        public static bool successAP;
-        public static bool successDP;
-        public static bool successS;
+        // VARIABLE FOR CUSTOMIZING MONSTERS IN PROGRAM
+        public static float monsterOneHealth = 0.0f;
+        public static float monsterTwoHealth = 0.0f;
+        public static float monsterOneAP = 0.0f;
+        public static float monsterTwoAP = 0.0f;
+        public static float monsterOneDP = 0.0f;
+        public static float monsterTwoDP = 0.0f;
+        public static float monsterOneS = 0.0f;
+        public static float monsterTwoS = 0.0f;
 
-        public static float monsterOneHealth;
-        public static float monsterTwoHealth;
-
-        public static float monsterOneAP;
-        public static float monsterTwoAP;
-
-        public static float monsterOneDP;
-        public static float monsterTwoDP;
-
-        public static float monsterOneS;
-        public static float monsterTwoS;
-
+        // Main logic
         public void GameLoop()
         {
             Console.Clear();
@@ -72,6 +76,7 @@ namespace ConsoleMonsters
                 if (option == 1)
                 {
                     // SELECT MONSTER 1
+                    // Make new monster class
                     Monster player;
                     do
                     {
@@ -80,6 +85,7 @@ namespace ConsoleMonsters
 
                         int.TryParse(Console.ReadLine(), out consoleInputMonsterOne);
 
+                        // Int to choose which monster
                         switch (consoleInputMonsterOne)
                         {
                             case 1:
@@ -119,10 +125,12 @@ namespace ConsoleMonsters
                                 player = new Shapeshifter(0, 0, 0, 0, 0);
                                 break;
                         }
+                        // Do loop as long as no monster has been choosen
                     } while (!monsterOne);
 
 
                     // SELECT MONSTER 2
+                    // Make new monster class
                     Monster monster;
 
                     do
@@ -133,6 +141,7 @@ namespace ConsoleMonsters
 
                         int.TryParse(Console.ReadLine(), out consoleInputMonsterOne);
 
+                        // Int to choose which monster
                         switch (consoleInputMonsterOne)
                         {
                             case 1:
@@ -210,27 +219,32 @@ namespace ConsoleMonsters
                                 monster = new Shapeshifter(0, 0, 0, 0, 0);
                                 break;
                         }
+                        // Do loop as long as no monsters has been choosen or monster1 = monster2
                     } while (!monsterTwo || (monsterChosen == monsterChosen2));
 
+                    // Make new fight class
                     Fight fight = new Fight();
+                    // Execute fight logic
                     fight.DoFight(player: player, monster: monster);
                     Console.WriteLine("\n\nPress any key to continue..");
                     Console.ReadLine();
                 }
-                else if (option == 2)
+                else if (option == 2) // Tutorial option
                 {
                     Console.Clear();
                     PrintTutorial();
                 }
-                else if (option == 3)
+                else if (option == 3) // Program exit option
                 {
                     Console.Clear();
                     Environment.Exit(0);
                 }
                 else { option = 0; }
+                // Do loop as long as option is not to quit
             } while (option != 3);
         }
 
+        // Prints the title
         public void PrintTitle()
         {
             Console.WriteLine("\n\n");
@@ -243,6 +257,7 @@ namespace ConsoleMonsters
             Console.WriteLine("\n\n");
         }
 
+        // Prints the options
         public void PrintOptions()
         {
             Console.WriteLine("Please choose one of the following options...\n");
@@ -251,6 +266,7 @@ namespace ConsoleMonsters
             Console.WriteLine("3. Exit\n");
         }
 
+        // Prints the tutorial
         public void PrintTutorial()
         {
             PrintTitle();
@@ -264,6 +280,7 @@ namespace ConsoleMonsters
             Console.ReadKey();
         }
 
+        // Prints available monsters
         public void PrintMonsters()
         {
             Console.WriteLine("Choose which monster should fight:\n\n");
@@ -274,10 +291,13 @@ namespace ConsoleMonsters
             Console.WriteLine("5. Ghoul, of monsters that feed mainly on the flesh of the dead and assume the form of their victims.");
         }
 
+        // Function for validating userinput (check if numbers are in the limits etc.)
         public void ValidateUserInput(int whichMonster)
         {
+            // whichMonster determines if user is giving input to monster 1 or 2
             if (whichMonster == 0)
             {
+                #region run checks for monster1
                 do
                 {
                     Console.Write($"Choose the Health of the Monster between {minHP} and {maxHP}.\n");
@@ -309,9 +329,11 @@ namespace ConsoleMonsters
                     if (monsterOneS < minS || monsterOneS > maxS) { validConsoleInputS = false; }
                     else { validConsoleInputS = true; }
                 } while (!validConsoleInputS);
+                #endregion
             }
             else
             {
+                #region run checks for monster2
                 do
                 {
                     Console.Write($"Choose the Health of the Monster between {minHP} and {maxHP}.\n");
@@ -343,6 +365,7 @@ namespace ConsoleMonsters
                     if (monsterTwoS < minS || monsterTwoS > maxS) { validConsoleInputS = false; }
                     else { validConsoleInputS = true; }
                 } while (!validConsoleInputS);
+                #endregion
             }
         }
     }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleMonsters
 {
+    // Monster class with properties like HP, AP, DP, S and a DoDamage() function;
     public partial class Monster 
     {
         public string name = "";
