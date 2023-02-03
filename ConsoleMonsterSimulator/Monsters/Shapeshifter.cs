@@ -3,9 +3,9 @@
     // Monster class with monster name
     public class Shapeshifter : Monster
     {
-        public Shapeshifter(float health, float aP, float dP, float s) : base(health, aP, dP, s)
+        public Shapeshifter(float health, float aP, float dP, float s, string name) : base(health, aP, dP, s)
         {
-            name = "Shapeshifter";
+            this.name = name;
         }
     }
 }

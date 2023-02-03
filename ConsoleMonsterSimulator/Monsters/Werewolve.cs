@@ -3,9 +3,9 @@
     // Monster class with monster name
     public class Werewolve : Monster
     {
-        public Werewolve(float health, float aP, float dP, float s) : base(health, aP, dP, s)
+        public Werewolve(float health, float aP, float dP, float s, string name) : base(health, aP, dP, s)
         {
-            name = "Werewolve";
+            this.name = name;
         }
     }
 }

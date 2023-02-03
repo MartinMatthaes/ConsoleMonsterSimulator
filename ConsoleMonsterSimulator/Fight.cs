@@ -35,17 +35,17 @@ namespace ConsoleMonsters
                     someoneDead = true;
                     Console.Clear();
                     Console.WriteLine($"{player.name} died and {monster.name} won with {monster.Health}HP left.\n\nTotal fights: {totalAttacks}.");
+                    break;
                 }
                 // Player does damage if still alive
                 player.DoDamage(monster);
-                // Check if someone died
-                if (someoneDead) return;
                 // If monster dies first
                 if (monster.Health <= 0)
                 {
                     someoneDead = true;
                     Console.Clear();
                     Console.WriteLine($"{monster.name} died and {player.name} won with {player.Health}HP left.\n\nTotal fights: {totalAttacks}.");
+                    break;
                 }
                 // Monster does damage if still alive
                 monster.DoDamage(player);

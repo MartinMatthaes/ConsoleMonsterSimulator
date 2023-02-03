@@ -91,38 +91,38 @@ namespace ConsoleMonsters
                             case 1:
                                 monsterChosen = 1;
                                 ValidateUserInput(0);
-                                player = new Shapeshifter(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, monsterOneHealth);
+                                player = new Shapeshifter(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, "Shapeshifter");
                                 monsterOne = true;
                                 break;
                             case 2:
                                 monsterChosen = 2;
                                 ValidateUserInput(0);
-                                player = new Vampire(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, monsterOneHealth);
+                                player = new Vampire(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, "Vampire");
                                 monsterOne = true;
                                 break;
                             case 3:
                                 monsterChosen = 3;
                                 ValidateUserInput(0);
-                                player = new Werewolve(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, monsterOneHealth);
+                                player = new Werewolve(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, "Werewolve");
                                 monsterOne = true;
                                 break;
 
                             case 4:
                                 monsterChosen = 4;
                                 ValidateUserInput(0);
-                                player = new Wraith(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, monsterOneHealth);
+                                player = new Wraith(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, "Wraith");
                                 monsterOne = true;
                                 break;
                             case 5:
                                 monsterChosen = 5;
                                 ValidateUserInput(0);
-                                player = new Ghoul(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, monsterOneHealth);
+                                player = new Ghoul(monsterOneHealth, monsterOneAP, monsterOneDP, monsterOneS, "Ghoul");
                                 monsterOne = true;
                                 break;
 
                             default:
                                 monsterOne = false;
-                                player = new Shapeshifter(0, 0, 0, 0, 0);
+                                player = new Shapeshifter(0, 0, 0, 0, "Default?");
                                 break;
                         }
                         // Do loop as long as no monster has been choosen
@@ -149,13 +149,13 @@ namespace ConsoleMonsters
                                 if (monsterChosen2 != monsterChosen)
                                 {
                                     ValidateUserInput(1);
-                                    monster = new Shapeshifter(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, monsterTwoHealth);
+                                    monster = new Shapeshifter(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, "Shapeshifter");
                                     monsterTwo = true;
                                 }
                                 else
                                 {
                                     monsterTwo = false;
-                                    monster = new Shapeshifter(0, 0, 0, 0, 0);
+                                    monster = new Shapeshifter(0, 0, 0, 0, "Shapeshifter");
                                 }
                                 break;
                             case 2:
@@ -163,13 +163,13 @@ namespace ConsoleMonsters
                                 if (monsterChosen2 != monsterChosen)
                                 {
                                     ValidateUserInput(1);
-                                    monster = new Vampire(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, monsterTwoHealth);
+                                    monster = new Vampire(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, "Vampire");
                                     monsterTwo = true;
                                 }
                                 else
                                 {
                                     monsterTwo = false;
-                                    monster = new Shapeshifter(0, 0, 0, 0, 0);
+                                    monster = new Shapeshifter(0, 0, 0, 0, "Shapeshifter");
                                 }
                                 break;
                             case 3:
@@ -177,13 +177,13 @@ namespace ConsoleMonsters
                                 if (monsterChosen2 != monsterChosen)
                                 {
                                     ValidateUserInput(1);
-                                    monster = new Werewolve(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, monsterTwoHealth);
+                                    monster = new Werewolve(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, "Werewolve");
                                     monsterTwo = true;
                                 }
                                 else
                                 {
                                     monsterTwo = false;
-                                    monster = new Shapeshifter(0, 0, 0, 0, 0);
+                                    monster = new Shapeshifter(0, 0, 0, 0, "Shapeshifter");
                                 }
                                 break;
                             case 4:
@@ -191,13 +191,13 @@ namespace ConsoleMonsters
                                 if (monsterChosen2 != monsterChosen)
                                 {
                                     ValidateUserInput(1);
-                                    monster = new Wraith(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, monsterTwoHealth);
+                                    monster = new Wraith(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, "Wraith");
                                     monsterTwo = true;
                                 }
                                 else
                                 {
                                     monsterTwo = false;
-                                    monster = new Shapeshifter(0, 0, 0, 0, 0);
+                                    monster = new Shapeshifter(0, 0, 0, 0, "Shapeshifter");
                                 }
                                 break;
                             case 5:
@@ -205,18 +205,18 @@ namespace ConsoleMonsters
                                 if (monsterChosen2 != monsterChosen)
                                 {
                                     ValidateUserInput(1);
-                                    monster = new Ghoul(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, monsterTwoHealth);
+                                    monster = new Ghoul(monsterTwoHealth, monsterTwoAP, monsterTwoDP, monsterTwoS, "Ghoul");
                                     monsterTwo = true;
                                 }
                                 else
                                 {
                                     monsterTwo = false;
-                                    monster = new Shapeshifter(0, 0, 0, 0, 0);
+                                    monster = new Shapeshifter(0, 0, 0, 0, "Shapeshifter");
                                 }
                                 break;
                             default:
                                 monsterTwo = false;
-                                monster = new Shapeshifter(0, 0, 0, 0, 0);
+                                monster = new Shapeshifter(0, 0, 0, 0, "Default?");
                                 break;
                         }
                         // Do loop as long as no monsters has been choosen or monster1 = monster2
